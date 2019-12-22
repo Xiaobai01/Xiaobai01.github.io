@@ -1,0 +1,15 @@
+a=0;
+b=1;
+f=inline('exp(x)+10*x-2');
+while(b-a)>0.5*10^(-3)
+    x=(a+b)/2;
+    if(f(x)==0)
+        break;
+    end
+    if(f(a)*f(x)<0)
+        b=x;
+    else
+        a=x;
+    end
+end
+x
